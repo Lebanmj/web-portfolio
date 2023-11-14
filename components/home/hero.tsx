@@ -1,8 +1,4 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
+
 
 import { EMAIL, MENULINKS, SOCIAL_LINKS, TYPED_STRINGS } from "../../constants";
 import React, { MutableRefObject, useEffect, useRef } from "react";
@@ -11,6 +7,7 @@ import Image from "next/image";
 import { gsap, Linear } from "gsap";
 import Button, { ButtonTypes } from "../common/button";
 import HeroImage from "./hero-image";
+
 
 const HERO_STYLES = {
   SECTION:
@@ -21,6 +18,7 @@ const HERO_STYLES = {
     "absolute hero-bg right-0 md:bottom-0 bottom-8 -z-1 md:w-3/4 w-full scale-125 sm:scale-100 flex items-end",
   TYPED_SPAN: "text-xl sm:text-2xl md:text-4xl seq",
 };
+
 
 const HeroSection = React.memo(() => {
   const typedSpanElement: MutableRefObject<HTMLSpanElement> = useRef(null);
@@ -33,9 +31,14 @@ const HeroSection = React.memo(() => {
       strings: TYPED_STRINGS,
       typeSpeed: 50,
       backSpeed: 50,
-      backDelay: 8000,
+      backDelay: 800,
       loop: true,
     });
+  };
+  const getWhatsAppLink = () => {
+  
+    const phoneNumber = '9767188926';
+    return `https://wa.me/91${phoneNumber}`;
   };
 
   const initRevealAnimation = (
@@ -81,31 +84,24 @@ const HeroSection = React.memo(() => {
 
   const renderHeroContent = (): React.ReactNode => (
     <div className={HERO_STYLES.CONTENT}>
-      <div className="md:mb-4 mb-2">
-        <h2 className="text-4xl seq">Hello 👋🏻</h2>
-        <h1 className="text-3xl seq">I am Ayush Singh</h1>
-      </div>
-      <p className="mb-4">
+      
+    <div className="md:mb-4 mb-2 font-sans">
+    <h2 className="text-4xl seq font-serif">Hello ✌️</h2>
+  
+  <h1 className="text-3xl seq font-dancing-script">I am Leban Joy Cardozo</h1>
+</div>
+
+<p className="mb-4 bg-gradient-to-r from-green-400 to-blue-300 text-transparent bg-clip-text">
         <span className={HERO_STYLES.TYPED_SPAN} ref={typedSpanElement}></span>
       </p>
       <div className="flex seq mb-5">{renderSocialLinks()}</div>
       <div className="flex seq">
-        <Button
-          classes="mr-3"
-          type={ButtonTypes.OUTLINE}
-          name="Resume"
-          otherProps={{
-            target: "_blank",
-            rel: "noreferrer",
-          }}
-          href="/Ayush_Resume.pdf"
-        ></Button>
-        <Button
+      <Button
           classes="ml-3"
           type={ButtonTypes.PRIMARY}
           name="Let's Talk"
-          href={SOCIAL_LINKS.topmate}
-          otherProps={{
+          href={getWhatsAppLink()}
+          otherProps={{ 
             target: "_blank",
             rel: "noreferrer",
           }}

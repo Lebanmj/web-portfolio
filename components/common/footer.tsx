@@ -1,8 +1,3 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
 
 import { EMAIL, MENULINKS, SOCIAL_LINKS } from "../../constants";
 import Image from "next/image";
@@ -22,6 +17,11 @@ const Footer = () => {
       </a>
     ));
   };
+  const getWhatsAppLink = () => {
+  
+    const phoneNumber = '9767188926';
+    return `https://wa.me/91${phoneNumber}`;
+  };
 
   const renderFooterContent = (): React.ReactNode => (
     <>
@@ -30,21 +30,12 @@ const Footer = () => {
       </h1>
       <div className="flex mt-8">{renderSocialIcons()}</div>
       <div className="flex mt-8">
-        <Button
-          classes="mr-3"
-          type={ButtonTypes.OUTLINE}
-          name="Resume"
-          otherProps={{
-            target: "_blank",
-            rel: "noreferrer",
-          }}
-          href="/Ayush_Resume.pdf"
-        ></Button>
-        <Button
+     
+      <Button
           classes="ml-3"
-          type={ButtonTypes.WHITE}
+          type={ButtonTypes.PRIMARY}
           name="Let's Talk"
-          href={SOCIAL_LINKS.topmate}
+          href={getWhatsAppLink()}
           otherProps={{
             target: "_blank",
             rel: "noreferrer",
@@ -52,12 +43,12 @@ const Footer = () => {
         ></Button>
       </div>
       <h2 className="text-center text-sm sm:text-base mt-8">
-        Designed and Developed with ❤️ by Ayush
+        Designed and Developed with ❤️ by Leban
       </h2>
     </>
   );
 
-  const { ref: footerRef } = MENULINKS[4];
+  const { ref: footerRef } = MENULINKS[3];
 
   return (
     <footer

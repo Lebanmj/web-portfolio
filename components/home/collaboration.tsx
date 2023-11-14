@@ -1,8 +1,4 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
+
 
 import { gsap, Linear } from "gsap";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
@@ -98,8 +94,8 @@ const CollaborationSection = () => {
         willChange ? "will-change-opacity" : ""
       }`}
     >
-      Interested in <span className="text-strong font-bold">Collaboration</span>
-      ?
+      Thanks for <span className="text-strong font-bold">Scrolling so </span> Far
+      
     </h1>
   );
 
@@ -113,7 +109,7 @@ const CollaborationSection = () => {
       {renderTitle()}
 
       {renderSlidingText(
-        " Frontend Development  Motion Graphics ",
+        " Frontend Development  Mobile Development ",
         "mt-6 md:mt-8 ui-right"
       )}
     </section>

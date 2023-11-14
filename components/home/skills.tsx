@@ -1,8 +1,4 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
+
 
 import { MENULINKS, SKILLS } from "../../constants";
 import Image from "next/image";
@@ -110,13 +106,19 @@ const SkillsSection = () => {
       {renderBackgroundPattern()}
       <div
         className={SKILL_STYLES.SECTION}
-        id={MENULINKS[2].ref}
+        id={MENULINKS[1].ref}
         ref={targetSection}
       >
         <div className="flex flex-col skills-wrapper">
           {renderSectionTitle()}
           <div className="mt-10">
             {renderSkillColumn("FRONTEND DEVELOPMENT", SKILLS.frontend)}
+          </div>
+          <div className="mt-10">
+            {renderSkillColumn("BACKEND DEVELOPMENT", SKILLS.backend)}
+          </div>
+          <div className="mt-10">
+            {renderSkillColumn("Database", SKILLS.database)}
           </div>
           <div className="flex flex-wrap mt-10">
             <div className="mr-6 mb-6">

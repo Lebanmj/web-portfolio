@@ -1,8 +1,4 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
+
 
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import {
@@ -511,7 +507,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
   return (
     <section
       className="w-full relative select-none min-h-screen section-container py-8 flex flex-col justify-center"
-      id={MENULINKS[3].ref}
+      id={MENULINKS[2].ref}
     >
       {renderSectionTitle()}
       <div className="grid grid-cols-12 gap-4 mt-20">

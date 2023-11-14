@@ -1,8 +1,3 @@
-// Copyright Ayush Singh 2021,2022. All Rights Reserved.
-// Project: folio
-// Author contact: https://www.linkedin.com/in/alphaayush/
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
 
 import { gsap, Linear } from "gsap";
 import React, { MutableRefObject, useEffect, useRef, useState } from "react";
@@ -69,16 +64,15 @@ const AboutSection = () => {
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        I am a passionate UI Engineer who bridges the gap between development
+        I am a passionate Software Developer who bridges the gap between development
         and design.{" "}
-      </span>
+      </span> <br></br>
       <span
         className={`about-2 leading-tight ${
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        I take responsibility to craft a good user experience using modern
-        frontend architecture.
+        "Hustling is Important for Success".
       </span>
     </h1>
   );

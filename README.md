@@ -1,10 +1,3 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## FOLIO
-
-[Live Demo](https://ayushsingh.co.in/)
-
-To cater to my goal of having my own portfolio website since 2016 🚀
 
 ## How did I create this?
 
@@ -25,11 +18,7 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Forked Versions from Community
 
-Vue JS implemetation by sjtuli: [filio-vue](https://github.com/sjtuli/filio-vue)
-Same template with a slightly different flavor by shubh73: [devfolio](https://github.com/shubh73/devfolio)
 
-## A note on re-sharing
 
-I have been refining the project using 7+ years of my learnings. While I appreciate the beauty of open source, due credits to the project will be appreciated if you plan to re-share the template. Copyright headers with author name should be included under the forked versions as well. Happy coding :)
+# portfolio-2.0

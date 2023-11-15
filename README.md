@@ -21,8 +21,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 
-# portfolio-2.0
-# portfolio-2.0
-# portfolio-2.0
-# portfolio-2.0
-# portfolio-2.0

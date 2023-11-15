@@ -54,11 +54,16 @@ export default function Home() {
 
   useEffect(() => {
     debouncedDimensionCalculator();
-
-    window.addEventListener("resize", debouncedDimensionCalculator);
-    return () =>
-      window.removeEventListener("resize", debouncedDimensionCalculator);
-  }, [timer]);
+  
+    const handleResize = () => debouncedDimensionCalculator();
+  
+    window.addEventListener("resize", handleResize);
+  
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [debouncedDimensionCalculator]); // Add missing dependency
+  
 
   const renderBackdrop = (): React.ReactNode => (
     <div className="fixed top-0 left-0 h-screen w-screen bg-gray-900 -z-1"></div>

@@ -444,6 +444,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
     // Animation for Timeline SVG
     animateTimeline(timeline, duration);
   }, [
+    animateTimeline,
     timelineSvg,
     svgContainer,
     svgWidth,
@@ -456,12 +457,12 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
 
   const renderSlides = (): React.ReactNode => (
     <div
-      className="max-w-full h-96 shadow-xl bg-gray-800 rounded-2xl overflow-hidden"
+      className="max-w-full h-96 shadow-xl bg-green-800 rounded-2xl overflow-hidden"
       ref={screenContainer}
     >
       <Image
         className="w-full h-8"
-        src="/timeline/title-bar.svg"
+        src="/timeline/reactindia.svg"
         alt="Title bar"
         width={644}
         height={34}

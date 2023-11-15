@@ -67,7 +67,8 @@ const Cursor = ({ isDesktop }: IDesktop) => {
     if (isDesktop && !isSmallScreen()) {
       initCursorAnimation();
     }
-  }, [cursor, follower, isDesktop]);
+  }, [cursor, follower, isDesktop, initCursorAnimation]); // Add missing dependency
+  
 
   return (
     <>

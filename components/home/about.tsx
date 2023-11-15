@@ -72,7 +72,8 @@ const AboutSection = () => {
           willChange ? "will-change-opacity" : ""
         }`}
       >
-        "Hustling is Important for Success".
+        &ldquo;Hustling is Important for Success&rdquo;.
+
       </span>
     </h1>
   );

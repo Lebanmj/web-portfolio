@@ -3,7 +3,7 @@
 export const METADATA = {
   title: "Leban Joy Cardozo | Portfolio ",
   description:
-    "I bridge the gap between design and development. I take responsibility to craft an aesthetic user experience using modern frontend architecture.",
+    "I bridge the Gap between Design and Development. I take responsibility to craft an aesthetic user experience using modern frontend architecture.",
   siteUrl: "",
 };
 
@@ -28,10 +28,10 @@ export const MENULINKS = [
 ];
 
 export const TYPED_STRINGS = [
-  "I design and develop apps",
-  "I develop dynamic user experience",
-  "I design and develop motion",
-  "I develop software",
+  "I Design and Develop Apps",
+  "I Develop Dynamic user Experience",
+  "I Design and Develop Motion",
+  "I Develop Software",
 ];
 
 export const EMAIL = "lebanjoycardozo@gmail.com";

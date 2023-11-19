@@ -132,7 +132,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
   },
   {
     type: NodeTypes.CHECKPOINT,
-    title: "Ecommerce Website (Admin)",
+    title: "Live Project",
     size: ItemSize.SMALL,
     subtitle:
       "Ecommerce Website (Admin)",
@@ -168,7 +168,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     title: "UI/UX Designing  ",
     size: ItemSize.SMALL,
     subtitle:
-      "A Hackathon Event which involved creating dynamic UI/",
+      "A Hackathon Event which involved Designing dynamic UI/UX",
     image: "/skills/figma.svg",
     slideImage: "/timeline/uiUX.jpeg",
     shouldDrawLine: true,
@@ -186,10 +186,10 @@ export const TIMELINE: Array<TimelineNodeV2> = [
   },
   {
     type: NodeTypes.CHECKPOINT,
-    title: "dance Champion",
+    title: "Dance Champion",
     size: ItemSize.SMALL,
     subtitle:
-      "Dance Competeion Winner held in Bora higher Secomdary School -Goa",
+      "Dance Competetion Winner held in Borda higher Secondary School -Goa",
     image: '',
     slideImage: "/timeline/dance.jpeg",
     shouldDrawLine: true,

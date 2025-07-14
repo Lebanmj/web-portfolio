@@ -43,7 +43,7 @@ const Footer = () => {
         ></Button>
       </div>
       <h2 className="text-center text-sm sm:text-base mt-8">
-        Designed and Developed with ❤️ by Leban
+        Designed and Developed with by Leban
       </h2>
     </>
   );

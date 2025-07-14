@@ -77,11 +77,11 @@ export const SKILLS = {
     
   ],
   backend: [
-    'django','nodejs'
+    'django','nodejs','laravel'
 
   ],
   database: [
-    'mongodb'
+    'mongodb','mysql'
 
   ],
   userInterface: ["figma", "sketch","canva"],

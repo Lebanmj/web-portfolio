@@ -467,8 +467,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
         width={644}
         height={34}
       />
-      <div className="relative h-full w-full -mt-2">
-        <div className="absolute top-0 left-0 h-full w-full">
+      
           {svgCheckpointItems.map((item, index) => (
             <Image
               className={`w-full absolute top-0 object-cover slide-${
@@ -481,8 +480,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
             />
           ))}
         </div>
-      </div>
-    </div>
+    
   );
 
   const renderSVG = (): React.ReactNode => (

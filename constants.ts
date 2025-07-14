@@ -107,7 +107,74 @@ export enum ItemSize {
 // timeline how many projects done
 
 export const TIMELINE: Array<TimelineNodeV2> = [
+//2024
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "2024 - 2025",
+    size: ItemSize.LARGE,
+    shouldDrawLine: false,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.DIVERGE,
+  },
 
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "Gatepass Managament system",
+    size: ItemSize.SMALL,
+    subtitle:
+      "managment system for vehcile, retuen,non returnable goods, vehicle permits for different manufacturing industry and more ",
+    image: "/timeline/reactindia.svg",
+    slideImage: "/timeline/laravel.jpg",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "PetSquad",
+    size: ItemSize.SMALL,
+    subtitle:
+      "App for Pets , where pet owner can contact with Vets,Grommer,pet store and more, real time videoand voice call + chatting and more",
+    image: "/timeline/reactindia.svg",
+    slideImage: "/timeline/petsquad.jpeg",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "Bizzavy",
+    size: ItemSize.SMALL,
+    subtitle:
+      "static Wordpress website for agency ",
+    image: "/timeline/reactindia.svg",
+    slideImage: "/timeline/bizzavy.jpg",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "Manovikas",
+    size: ItemSize.SMALL,
+    subtitle:
+      "Standard school website with CRUD operation for basic information and norices regarding school",
+    image: "/timeline/reactindia.svg",
+    slideImage: "/timeline/manovikas.png",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "Web developer",
+    size: ItemSize.SMALL,
+    subtitle:
+      "Web Developer at Coderelix - Margao,Goa",
+    image: '',
+    slideImage: "/timeline/team123.jpeg",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  //2023
   {
     type: NodeTypes.CHECKPOINT,
     title: "2023",

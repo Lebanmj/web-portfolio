@@ -16,7 +16,7 @@ export const photographyItems = [
   { image: "/photography/DSC_6096.jpg", className: "h-[340px]" },
   
   { image: "/photography/_DSC5420.JPG", className: "h-[340px]" },
-  { image: "/photography/_dsc5423.JPG",className: "md:col-span-2 h-[340px]" },
+  { image: "/photography/_DSC5423.JPG",className: "md:col-span-2 h-[340px]" },
   { image: "/photography/_DSC5421.JPG", className: "h-[340px]" },
   { image: "/photography/_DSC5422.JPG", className: "h-[360px]" },
   { image: "/photography/_DSC5426.JPG", className: "h-[340px]" },

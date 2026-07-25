@@ -18,6 +18,10 @@ export const MENULINKS = [
     ref: "skills",
   },
   {
+    name: "Photography",
+    ref: "photography",
+  },
+  {
     name: "Timeline",
     ref: "timeline",
   },
@@ -29,8 +33,9 @@ export const MENULINKS = [
 
 export const TYPED_STRINGS = [
   "I Design and Develop Apps",
-  "I Develop Dynamic user Experience",
-  "I Design and Develop Motion",
+  "I do Social Media Marketing",
+  "I do Videography and Photography",
+  "I do Edits and reels",
   "I Develop Software",
 ];
 

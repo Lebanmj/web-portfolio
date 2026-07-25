@@ -1,9 +1,29 @@
-import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { photographyItems } from "./photography-data";
+
+const PAGE_SIZE = 9;
+const STORAGE_KEY = "photographyPage";
 
 const PhotographySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const stored = Number(window.localStorage.getItem(STORAGE_KEY) || "1");
+    if (stored > 1) {
+      setPage(stored);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem(STORAGE_KEY, String(page));
+  }, [page]);
+
+  const totalPages = Math.ceil(photographyItems.length / PAGE_SIZE);
+  const visiblePhotos = photographyItems.slice(0, page * PAGE_SIZE);
+  const hasMore = page < totalPages;
 
   return (
     <section id="photography" className="w-full relative select-none py-24 section-container">
@@ -60,26 +80,39 @@ const PhotographySection = () => {
       </div>
 
       <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
-        {photographyItems.map((item, index) => (
+        {visiblePhotos.map((item, index) => (
           <button
             key={`${item.image}-${index}`}
             type="button"
             onClick={() => setSelectedImage(item.image)}
             className={`group relative overflow-hidden rounded-[1.5rem] border border-gray-800/70 bg-gray-900/50 text-left ${item.className}`}
           >
-            <Image
+            <img
               src={item.image}
               alt="Photography gallery item"
-              layout="fill"
-              objectFit="cover"
-              className="transition duration-700 group-hover:scale-105"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </button>
         ))}
       </div>
 
-   
+      {hasMore && (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setPage((prev) => Math.min(prev + 1, totalPages))}
+            className="rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10"
+          >
+            Show more photos
+          </button>
+        </div>
+      )}
+
+      <div className="mt-4 text-center text-sm text-gray-400">
+        Showing {visiblePhotos.length} of {photographyItems.length} photos
+      </div>
 
       {selectedImage && (
         <div
@@ -95,11 +128,11 @@ const PhotographySection = () => {
               Close
             </button>
             <div className="relative h-[80vh] w-full overflow-hidden rounded-[1.5rem]">
-              <Image
-                src={selectedImage}
+              <img
+                src={selectedImage || ''}
                 alt="Selected photography"
-                layout="fill"
-                objectFit="contain"
+                loading="eager"
+                className="h-full w-full object-contain mx-auto"
               />
             </div>
           </div>

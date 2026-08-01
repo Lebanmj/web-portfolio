@@ -79,24 +79,24 @@ const PhotographySection = () => {
         </div>
       </div>
 
-      <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
-        {visiblePhotos.map((item, index) => (
-          <button
-            key={`${item.image}-${index}`}
-            type="button"
-            onClick={() => setSelectedImage(item.image)}
-            className={`group relative overflow-hidden rounded-[1.5rem] border border-gray-800/70 bg-gray-900/50 text-left ${item.className}`}
-          >
-            <img
-              src={item.image}
-              alt="Photography gallery item"
-              loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-          </button>
-        ))}
-      </div>
+<div className="mt-20 grid grid-cols-3 gap-2 md:gap-6 md:grid-cols-3 xl:grid-cols-4 auto-rows-fr">
+  {visiblePhotos.map((item, index) => (
+    <button
+      key={`${item.image}-${index}`}
+      type="button"
+      onClick={() => setSelectedImage(item.image)}
+      className="group relative overflow-hidden rounded-lg md:rounded-[1.5rem] border border-gray-800/70 bg-gray-900/50 text-left aspect-square"
+    >
+      <img
+        src={item.image}
+        alt="Photography gallery item"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+    </button>
+  ))}
+</div>
 
       {hasMore && (
         <div className="mt-8 flex justify-center">

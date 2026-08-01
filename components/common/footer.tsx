@@ -48,8 +48,7 @@ const Footer = () => {
     </>
   );
 
-  const { ref: footerRef } = MENULINKS[3];
-
+const { ref: footerRef } = MENULINKS[4];  // "Contact"
   return (
     <footer
       className="w-full relative select-none bg-cover flex flex-col items-stretch"
